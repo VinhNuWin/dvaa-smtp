@@ -1,0 +1,20 @@
+{
+  "name": "dvaa-report",
+  "version": "1.0.0",
+  "description": "app using nodemailer",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vinh Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.3",
+    "nodemon": "^2.0.22"
+  }
+}
