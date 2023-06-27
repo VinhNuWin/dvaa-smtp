@@ -18,14 +18,16 @@ app.get('/', (req, res) => {
 });
 
 app.post('/api/sendemail', async (req, res) => {
-    const { email } = req.body;
+    const { email } = req.body.email;
+    const { registry } = req.body
+
 
     try {
-        const send_to = "Vinhn333@yahoo.com";
+        const send_to = {email};
         const send_from = "info@documentedvoices.org";
-        const replyTo = "Vinhn333@yahoo.com";
-        const subject = "Successfully filed your registry report";
-        const message = `Thank you for your report, Here is a time stamped copy of your report`;
+        const replyTo = "Vinhn3333@gmail.com";
+        const subject = "Your Documented Voice has been successfully reported";
+        const message = {registry};
 
         await sendEmail(send_to, send_from, replyTo, subject, message)
         res.status(200).json({success: true, message: "Report Sent"})
