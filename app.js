@@ -32,7 +32,7 @@ app.post('/api/sendemail', async (req, res) => {
         await sendEmail(send_to, send_from, replyTo, subject, message)
         res.status(200).json({success: true, message: "Report Sent"})
     } catch (error) {
-        res.status(500).json({success: false, message: 'Report Failed to Send'})
+        res.status(500).json({success: false, message: req.body})
     }
 });
 
