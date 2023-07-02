@@ -37,14 +37,14 @@ const transporter = nodemailer.createTransport({
   secure: false,
   auth: {
     // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    user: process.env.user,
-    pass: process.env.pass
+    user: user,
+    pass: pass
   }
 });
 
 let mailOptions = {
     from: '"Nodemailer Test" <info@documentedvoices.org>',
-    to: "Vinhn3333@gmail.com",
+    to: `${req.body.email}`,
     subject: "Your Documented Voice has been successfully reported",
     text:'Hello world?',
     html: output,
