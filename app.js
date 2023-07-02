@@ -23,9 +23,9 @@ app.post('/api/sendemail', async (req, res) => {
 
     const output = `
     <p>Here is your Registry Report</p>
-    <h3>Contact Details</h3>
+    <h3>${req.body.registryReport.registryType}</h3>
     <ul>
-    <li>Registry: ${req.body}</li>
+    <li>Registry: ${req.body.registryReport}</li>
     <li>Type: ${req.body.email}</li>
     
     `;
@@ -47,7 +47,7 @@ const transporter = nodemailer.createTransport({
 });
 
 let mailOptions = {
-    from: '"Nodemailer Test" <info@documentedvoices.org>',
+    from: '"Documented Voices" <info@documentedvoices.org>',
     to: req.body.email,
     subject: "Your Documented Voice has been successfully reported",
     text:'Hello world?',
