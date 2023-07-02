@@ -1,4 +1,4 @@
-const dotenv = require('dotenv').config();
+require('dotenv').config();
 // dotenv.config();
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -25,13 +25,12 @@ app.post('/api/sendemail', async (req, res) => {
     <p>Here is your Registry Report</p>
     <h3>Contact Details</h3>
     <ul>
-    <li>Name: ${req.body}</li>
+    <li>Registry: ${req.body}</li>
     <li>Type: ${req.body.email}</li>
     
     `;
 
     const {email} = req.body.email;
-    const {registry} = req.body;
 
 const transporter = nodemailer.createTransport({
   host: "smtppro.zoho.com",
@@ -39,17 +38,20 @@ const transporter = nodemailer.createTransport({
   secure: false,
   auth: {
     // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    user: process.env.user,
-    pass: process.env.pass
+    user: process.env.USER,
+    pass: process.env.PASS
+  },
+  tls:{
+    rejectUnauthorized: false
   }
 });
 
 let mailOptions = {
     from: '"Nodemailer Test" <info@documentedvoices.org>',
-    to: {email},
+    to: req.body.email,
     subject: "Your Documented Voice has been successfully reported",
     text:'Hello world?',
-    html: {registry},
+    html: output,
  };
 // };
 transporter.sendMail(mailOptions, (error, info) => {
