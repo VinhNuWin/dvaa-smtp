@@ -30,6 +30,8 @@ app.post('/api/sendemail', async (req, res) => {
     
     `;
 
+    const {email} = req.body.email;
+    const {registry} = req.body;
 
 const transporter = nodemailer.createTransport({
   host: "smtppro.zoho.com",
@@ -37,17 +39,17 @@ const transporter = nodemailer.createTransport({
   secure: false,
   auth: {
     // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    user: user,
-    pass: pass
+    user: process.env.user,
+    pass: process.env.pass
   }
 });
 
 let mailOptions = {
     from: '"Nodemailer Test" <info@documentedvoices.org>',
-    to: `${req.body.email}`,
+    to: {email},
     subject: "Your Documented Voice has been successfully reported",
     text:'Hello world?',
-    html: output,
+    html: {registry},
  };
 // };
 transporter.sendMail(mailOptions, (error, info) => {
