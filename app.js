@@ -19,7 +19,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/api/sendemail', async (req, res) => {
-    console.log(req.body)
+    console.log(req.body);
+    const body = JSON.stringify(req.body.registryReport);
+    
 
     const output = 
     `<p>Here is your Registry Report</p>
@@ -27,7 +29,7 @@ app.post('/api/sendemail', async (req, res) => {
     <ul>
     <li>Registry: ${req.body.registryReport}</li>
     <li>Type: ${req.body.email}</li>`
-    
+    req.body.email
     ;
 
     const {email} = req.body.email;
