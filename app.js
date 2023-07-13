@@ -22,12 +22,9 @@ app.post('/api/sendemail', async (req, res) => {
     console.log(req.body)
 
     const output = `
-    <p>Here is your Registry Report</p>
-    <h3>${req.body.registryReport.registryType}</h3>
-    <ul>
-    <li>Registry: ${req.body.registryReport}</li>
-    <li>Type: ${req.body.email}</li>
-    
+   Here is your Registry Report
+${req.body.registryReport.registryType}
+Registry: ${req.body.registryReport}
     `;
 
     const {email} = req.body.email;
