@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const router = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');

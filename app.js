@@ -1,6 +1,8 @@
 require('dotenv').config();
 // dotenv.config();
 const express = require('express');
+const app = express();
+const router = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
@@ -11,8 +13,6 @@ const elderlyEmail = require('./utils/elderlyEmail');
 const employeeEmail = require('./utils/employeeEmail');
 const assaultEmail = require('./utils/assaultEmail');
 const generalEmail = require('./utils/generalEmail');
-
-const app = express();
 
 // Middleware
 app.use(express.json());
