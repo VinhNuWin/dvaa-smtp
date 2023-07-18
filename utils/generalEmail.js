@@ -1,7 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const nodemailer = require('nodemailer');
 
 router.use(express.json());
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(cors());
 
 router.post(`/api/sendemail/general`, async (req, res) => {
     console.log(req.body);
