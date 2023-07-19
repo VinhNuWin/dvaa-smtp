@@ -1,7 +1,7 @@
 require('dotenv').config();
 // dotenv.config();
 const express = require('express');
-const router = express();
+const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
@@ -11,13 +11,13 @@ const nodemailer = require('nodemailer');
 // const elderlyEmail = require('./utils/elderlyEmail');
 // const employeeEmail = require('./utils/employeeEmail');
 // const assaultEmail = require('./utils/assaultEmail');
-const generalEmail = require('./utils/generalEmail');
+// const generalEmail = require('./utils/generalEmail');
 
 // Middleware
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
-app.use("/", router);
+// app.use("/", router);
 // app.use('/children', childrenEmail);
 // app.use('/spouse', spouseEmail);
 // app.use('/elderly', elderlyEmail);
