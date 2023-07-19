@@ -11,7 +11,7 @@ const nodemailer = require('nodemailer');
 // const elderlyEmail = require('./utils/elderlyEmail');
 // const employeeEmail = require('./utils/employeeEmail');
 // const assaultEmail = require('./utils/assaultEmail');
-// const generalEmail = require('./utils/generalEmail');
+const generalEmail = require('./utils/generalEmail');
 
 // Middleware
 app.use(express.json());
