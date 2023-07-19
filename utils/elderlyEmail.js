@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-// const bodyParser = require('body-parser');
-// const cors = require('cors');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 router.use(express.json());

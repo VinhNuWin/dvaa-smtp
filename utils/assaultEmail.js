@@ -5,9 +5,9 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 router.use(express.json());
-app.use(express.json());
-app.use(bodyParser.json());
-app.use(cors());
+// app.use(express.json());
+// app.use(bodyParser.json());
+// app.use(cors());
 
 router.post(`/api/sendemail/assault`, async (req, res) => {
     console.log(req.body);
