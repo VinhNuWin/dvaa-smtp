@@ -9,7 +9,7 @@ router.use(express.json());
 // app.use(bodyParser.json());
 // app.use(cors());
 
-router.post(`/api/sendemail/employee`, async (req, res) => {
+router.post(`/api/sendemail/employees`, async (req, res) => {
     console.log(req.body);
     const body = JSON.stringify(req.body.registryReport);
     

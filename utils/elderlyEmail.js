@@ -1,3 +1,4 @@
+
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
@@ -7,7 +8,7 @@ const nodemailer = require('nodemailer');
 router.use(express.json());
 
 
-router.post(`/api/sendemail/elderly`, async (req, res) => {
+router.post(`/elderly`, async (req, res) => {
     console.log(req.body);
     const body = JSON.stringify(req.body.registryReport);
     
