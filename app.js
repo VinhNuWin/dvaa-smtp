@@ -782,7 +782,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-let registryType = req.body.registryType;
+
 
 let mailOptions = {
     from: '"Documented Voices" <info@documentedvoices.org>',
