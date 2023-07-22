@@ -1,22 +1,12 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const nodemailer = require('nodemailer');
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const nodemailer = require("nodemailer");
 
-// app.use(express.json());
-// app.use(bodyParser.json());
-// app.use(cors());
-
-router.post(`/api/sendemail/assault`, async (req, res) => {
-    console.log(req.body);
-    const body = JSON.stringify(req.body.registryReport);
-    
-    const data = req.body.registryReport;
-
-    const output = 
-    `<!doctype html>
-<html lang="en-US">
+const assaultEmail = (req, res) => {
+  const output = `<!doctype html>
+<html lang="en-US"> 
 
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
@@ -102,7 +92,136 @@ router.post(`/api/sendemail/assault`, async (req, res) => {
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.date}</td>
                                     </tr>
-                                 
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.fullName}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.incidentAddress}</td>
+                                    </tr>
+                                    <tr>                                    
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.alcoholInvolved}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.drugsInvolved}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.wasSurvivorAsleep}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.verbalThreats}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.resistanceOffered}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.detailsOfIncident}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.areasAssaulted}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.evidence}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.useOfWeapons}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.useOfRestraints}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.assailantGender}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.raceEthnicity}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.assailantsFullName}</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Incident Date:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.survivorGender}</td>
+                                    </tr>
+
                                             </tbody>
                                         </table>
                                     </td>
@@ -118,7 +237,7 @@ router.post(`/api/sendemail/assault`, async (req, res) => {
                     </tr>
                     <tr>
                         <td style="text-align:center;">
-                                <p style="font-size:14px; color:#455056bd; line-height:18px; margin:0 0 0;">&copy; <strong>www.rakeshmandal.com</strong></p>
+                                <p style="font-size:14px; color:#455056bd; line-height:18px; margin:0 0 0;">&copy; <strong>www.documentedvoices.org</strong></p>
                         </td>
                     </tr>
                 </table>
@@ -127,42 +246,38 @@ router.post(`/api/sendemail/assault`, async (req, res) => {
     </table>
 </body>
 
-</html>`
+</html>`;
 
-res.status(200).json();
+  res.status(200).json();
 
-const transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     host: "smtppro.zoho.com",
     port: 587,
     secure: false,
     auth: {
-      // TODO: replace `user` and `pass` values from <https://forwardemail.net>
       user: process.env.USER,
       pass: process.env.PASS,
     },
-    tls:{
-      rejectUnauthorized: false
-    }
-  });
-  
-  
-  let mailOptions = {
-      from: '"Documented Voices" <info@documentedvoices.org>',
-      to: req.body.email,
-      subject: "Your Documented Voice has been successfully reported",
-      text:'Reported',
-      html: output,
-   };
-  // };
-  transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-          return console.log(error);
-      }
-      console.log("Message sent: %s", info.messageId);
-      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-  
-  })
-  
+    tls: {
+      rejectUnauthorized: false,
+    },
   });
 
-module.exports = router;
+  let mailOptions = {
+    from: '"Documented Voices" <info@documentedvoices.org>',
+    to: req.body.email,
+    subject: "Your Voice has been successfully Documented",
+    text: "Reported",
+    html: output,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log("Message sent: %s", info.messageId);
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  });
+};
+
+module.exports = assaultEmail;
