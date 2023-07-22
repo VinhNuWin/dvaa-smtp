@@ -4,16 +4,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 
-router.use(express.json());
-// app.use(express.json());
-// app.use(bodyParser.json());
-// app.use(cors());
-
-router.post(`/api/sendemail/employees`, async (req, res) => {
-    console.log(req.body);
-    const body = JSON.stringify(req.body.registryReport);
+const employeeEmail = (req,res) => {
+    // const body = JSON.stringify(req.body.registryReport);
     
-    const data = req.body.registryReport;
+    // const data = req.body.registryReport;
 
     const output = 
     `<!doctype html>
@@ -137,7 +131,6 @@ const transporter = nodemailer.createTransport({
     port: 587,
     secure: false,
     auth: {
-      // TODO: replace `user` and `pass` values from <https://forwardemail.net>
       user: process.env.USER,
       pass: process.env.PASS,
     },
@@ -164,6 +157,46 @@ const transporter = nodemailer.createTransport({
   
   })
   
-  });
+  };
 
-module.exports = router;
+
+// const transporter = nodemailer.createTransport({
+//   host: "smtppro.zoho.com",
+//   port: 587,
+//   secure: false,
+//   auth: {
+//     // TODO: replace `user` and `pass` values from <https://forwardemail.net>
+//     user: process.env.USER,
+//     pass: process.env.PASS,
+//   },
+//   tls:{
+//     rejectUnauthorized: false
+//   }
+// });
+
+// let mailOptions = {
+//     from: '"Documented Voices" <info@documentedvoices.org>',
+//     to: email,
+//     subject: "Your Documented Voice has been successfully reported",
+//     text:'Hello world?',
+//     html: output,
+//  };
+
+
+// transporter.sendMail(mailOptions, (error, info) => {
+//     if (error) {
+//         return console.log(error);
+//     }
+//     console.log("Message sent: %s", info.messageId);
+//     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
+// })
+
+module.exports = employeeEmail;
+
+
+
+
+
+
+

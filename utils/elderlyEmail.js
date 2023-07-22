@@ -1,17 +1,9 @@
 
-const express = require('express');
-const router = express.Router();
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const nodemailer = require('nodemailer');
-
-router.use(express.json());
-
-
-router.post(`/elderly`, async (req, res) => {
+// ELDERLY
+app.post(`/general`, async (req, res) => {
     console.log(req.body);
-    const body = JSON.stringify(req.body.registryReport);
-    
+    const body = req.body.registryReport;
+    const {email} = req.body.email;
     const data = req.body.registryReport;
 
     const output = 
@@ -76,7 +68,7 @@ router.post(`/elderly`, async (req, res) => {
                                                         registry ID:</td>
                                                     <td
                                                         style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                                        ${req.body.registryReport.registryId}</td>
+                                                        ${req.body.registryId}</td>
                                                 </tr>
                                                 <tr>
                                                 <td
@@ -92,7 +84,7 @@ router.post(`/elderly`, async (req, res) => {
                                                 Registry:</td>
                                             <td
                                                 style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                                ${req.body.registryReport.registryType}</td>
+                                                ${req.body.registryType}</td>
                                         </tr>
                                         <tr>
                                         <td
@@ -100,7 +92,7 @@ router.post(`/elderly`, async (req, res) => {
                                             Incident Date:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.date}</td>
+                                            ${req.body.date}</td>
                                     </tr>
                                  
                                             </tbody>
@@ -128,41 +120,4 @@ router.post(`/elderly`, async (req, res) => {
 </body>
 
 </html>`
-
-res.status(200).json();
-
-const transporter = nodemailer.createTransport({
-    host: "smtppro.zoho.com",
-    port: 587,
-    secure: false,
-    auth: {
-      // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-      user: process.env.USER,
-      pass: process.env.PASS,
-    },
-    tls:{
-      rejectUnauthorized: false
-    }
-  });
-  
-  
-  let mailOptions = {
-      from: '"Documented Voices" <info@documentedvoices.org>',
-      to: req.body.email,
-      subject: "Your Documented Voice has been successfully reported",
-      text:'Reported',
-      html: output,
-   };
-  // };
-  transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-          return console.log(error);
-      }
-      console.log("Message sent: %s", info.messageId);
-      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-  
-  })
-  
-  });
-
-module.exports = router;
+});
