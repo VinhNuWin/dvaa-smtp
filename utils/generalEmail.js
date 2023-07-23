@@ -107,7 +107,11 @@ const employeeEmail = (req, res) => {
                                             Incident Location:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.incidentAddress}</td>
+                                            ${req.body.registryReport.incidentAddress.streetAddress}
+                                            ${req.body.registryReport.incidentAddress.city}
+                                            ${req.body.registryReport.incidentAddress.state}
+                                            ${req.body.registryReport.incidentAddress.zipcode}
+                                            </td>
                                     </tr>
                                     <tr>                                    
                                     <tr>
