@@ -28,13 +28,14 @@ const spouseEmail = (req, res) => {
                         <td style="height:80px;">&nbsp;</td>
                     </tr>
                     <!-- Logo -->
+                                <tr>
+                                    <td style="padding:0 15px; text-align:center;">
+                                        <h1 style="color:#1e1e2d; font-weight:200; margin:0;font-size:24px;font-family:'Rubik',sans-serif;">Documented Voices</h1>
+                                        <span style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece; 
+                                        width:100px;"></span>
+                                    </td>
+                                </tr>
                     <tr>
-                        <td style="text-align:center;">
-                          <a href="https://documentedvoices.org" title="logo" target="_blank">
-                            <img width="60" src="https://ibb.co/MGKKXST" title="logo" alt="logo">
-                          </a>
-                        </td>
-                    </tr>
                     <tr>
                         <td style="height:20px;">&nbsp;</td>
                     </tr>
@@ -95,7 +96,7 @@ const spouseEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Name:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.fullName}</td>
@@ -103,7 +104,7 @@ const spouseEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Incident Location:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.incidentAddress}</td>
@@ -112,7 +113,7 @@ const spouseEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Incident Details:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.detailsOfIncident}</td>
@@ -120,7 +121,7 @@ const spouseEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Assailants:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.peopleInvolved}</td>
@@ -128,15 +129,7 @@ const spouseEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.relationshipToReporter}</td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Witnesses:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.witnesses}</td>
@@ -144,15 +137,15 @@ const spouseEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            First Incident:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.additionalIncidentsOfAbuse}</td>
+                                            ${req.body.registryReport.firstReport}</td>
                                     </tr>
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Threats to Victim:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.concerningThreatsOrActions}</td>
@@ -160,50 +153,10 @@ const spouseEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Evidence:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.evidence}</td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.otherPeopleAtRisk}</td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.currentLivingSituationSafe}</td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.additionalComments}</td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.additionalSupportNeeded}</td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.alcoholInvolved}</td>
                                     </tr>
 
                                             </tbody>

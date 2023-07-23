@@ -10,7 +10,7 @@ const assaultEmail = (req, res) => {
 
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>Appointment Reminder Email Template</title>
+    <title>Documented Voices Registry</title>
     <meta name="description" content="Documented Voices Registry Report">
 </head>
 <style>
@@ -28,13 +28,13 @@ const assaultEmail = (req, res) => {
                         <td style="height:80px;">&nbsp;</td>
                     </tr>
                     <!-- Logo -->
-                    <tr>
-                        <td style="text-align:center;">
-                          <a href="https://documentedvoices.org" title="logo" target="_blank">
-                            <img width="60" src="https://ibb.co/MGKKXST" title="logo" alt="logo">
-                          </a>
-                        </td>
-                    </tr>
+                                <tr>
+                                    <td style="padding:0 15px; text-align:center;">
+                                        <h1 style="color:#1e1e2d; font-weight:200; margin:0;font-size:24px;font-family:'Rubik',sans-serif;">Documented Voices</h1>
+                                        <span style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece; 
+                                        width:100px;"></span>
+                                    </td>
+                                </tr>
                     <tr>
                         <td style="height:20px;">&nbsp;</td>
                     </tr>
@@ -95,7 +95,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Reported by:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.fullName}</td>
@@ -103,7 +103,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Incident Location:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.incidentAddress}</td>
@@ -112,7 +112,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Was alcohol involved:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.alcoholInvolved}</td>
@@ -120,7 +120,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Were drugs involved:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.drugsInvolved}</td>
@@ -128,7 +128,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Was survivor asleep:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.wasSurvivorAsleep}</td>
@@ -136,7 +136,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Were verbal threats made:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.verbalThreats}</td>
@@ -144,7 +144,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Resistance Offered:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.resistanceOffered}</td>
@@ -152,7 +152,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Details of incident:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.detailsOfIncident}</td>
@@ -160,7 +160,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Areas assaulted:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.areasAssaulted}</td>
@@ -168,7 +168,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Evidence:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.evidence}</td>
@@ -176,7 +176,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Use of Weapons:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.useOfWeapons}</td>
@@ -184,7 +184,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Use of Restraints:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.useOfRestraints}</td>
@@ -192,23 +192,7 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.assailantGender}</td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.raceEthnicity}</td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Assailants Name:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.assailantsFullName}</td>
@@ -216,11 +200,20 @@ const assaultEmail = (req, res) => {
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Incident Date:</td>
+                                            Assailants Gender:</td>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.survivorGender}</td>
+                                            ${req.body.registryReport.assailantGender}</td>
                                     </tr>
+                                    <tr>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
+                                            Ethnicity:</td>
+                                        <td
+                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
+                                            ${req.body.registryReport.raceEthnicity}</td>
+                                    </tr>
+
 
                                             </tbody>
                                         </table>
@@ -255,8 +248,10 @@ const assaultEmail = (req, res) => {
     port: 587,
     secure: false,
     auth: {
-      user: process.env.USER,
-      pass: process.env.PASS,
+      //   user: process.env.USER,
+      //   pass: process.env.PASS,
+      user: "info@documentedvoices.org",
+      pass: "WpLyxx6jdfF0",
     },
     tls: {
       rejectUnauthorized: false,
@@ -269,6 +264,13 @@ const assaultEmail = (req, res) => {
     subject: "Your Voice has been successfully Documented",
     text: "Reported",
     html: output,
+    // attachments: [
+    //   {
+    //     filename: "DV.png",
+    //     path: "assets/DV.png",
+    //     cid: "logo@documentedvoices.org", //same cid value as in the html img src
+    //   },
+    // ],
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
