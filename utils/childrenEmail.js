@@ -100,23 +100,7 @@ const childrenEmail = (req, res) => {
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.fullName}</td>
-                                    </tr>  
-                                                                        <tr>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Immediate Danger:</td>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.immediateDangerOrMedicalAttention}</td>
-                                    </tr>                    
-                                    <tr>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Victims Age:</td>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.age}</td>
-                                    </tr>
+                                    </tr>                  
                                     <tr>
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
@@ -148,14 +132,6 @@ const childrenEmail = (req, res) => {
                                         <td
                                             style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
                                             ${req.body.registryReport.evidence}</td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; border-right: 1px solid #ededed; width: 35%; font-weight:500; color:rgba(0,0,0,.64)">
-                                            Weapons in the home:</td>
-                                        <td
-                                            style="padding: 10px; border-bottom: 1px solid #ededed; color: #455056;">
-                                            ${req.body.registryReport.useOfWeapons}</td>
                                     </tr>
                                     <tr>
                                         <td
