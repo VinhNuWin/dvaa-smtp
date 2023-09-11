@@ -10,6 +10,7 @@ const elderlyEmail = require("./utils/elderlyEmail");
 const employeeEmail = require("./utils/employeeEmail");
 const assaultEmail = require("./utils/assaultEmail");
 const generalEmail = require("./utils/generalEmail");
+const contactEmail = require("./utils/contactEmail");
 
 // Middleware
 app.use(express.json());
@@ -21,6 +22,7 @@ app.use("/spouse", spouseEmail);
 app.use("/elderly", elderlyEmail);
 app.use("/assault", assaultEmail);
 app.use("/general", generalEmail);
+app.use("/contact", contactEmail);
 
 // Route
 app.get("/", (req, res) => {
