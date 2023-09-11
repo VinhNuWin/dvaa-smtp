@@ -252,10 +252,8 @@ const assaultEmail = (req, res) => {
     port: 587,
     secure: false,
     auth: {
-      //   user: process.env.USER,
-      //   pass: process.env.PASS,
-      user: "info@documentedvoices.org",
-      pass: "WpLyxx6jdfF0",
+      user: process.env.USER,
+      pass: process.env.PASS,
     },
     tls: {
       rejectUnauthorized: false,
