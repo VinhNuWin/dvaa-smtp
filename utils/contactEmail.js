@@ -64,6 +64,11 @@ const contactEmail = (req, res) => {
                                               style="width: 100%; border: 1px solid #ededed">
                                               <tbody>
 
+<!-- Google Calendar Appointment Scheduling begin -->
+<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ08baPR8LU8QmCxrfUfxSlqKzWwspv2lozoIt0aW2QgVofKiwE7CgUtHnR9bcNGxfbJ9jf_-YSW?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->
+
+
                                                   <!-- Google Calendar Appointment Scheduling begin -->
 <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
