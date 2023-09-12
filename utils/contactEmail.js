@@ -30,7 +30,7 @@ const contactEmail = (req, res) => {
                     <!-- Logo -->
                                 <tr>
                                     <td style="padding:0 15px; text-align:center;">
-                                        <h1 style="color:#1e1e2d; font-weight:200; margin:0;font-size:24px;font-family:'Rubik',sans-serif;">Documented Voices</h1>
+                                        <h1 style="color:#1e1e2d; font-weight:200; margin:0;font-size:24px;font-family:'Rubik',sans-serif;">Vinh Nuwin</h1>
                                         <span style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece; 
                                         width:100px;"></span>
                                     </td>
@@ -49,7 +49,7 @@ const contactEmail = (req, res) => {
                                 <!-- Title -->
                                 <tr>
                                     <td style="padding:0 15px; text-align:center;">
-                                        <h1 style="color:#1e1e2d; font-weight:400; margin:0;font-size:32px;font-family:'Rubik',sans-serif;">Registry Report</h1>
+                                        <h1 style="color:#1e1e2d; font-weight:400; margin:0;font-size:32px;font-family:'Rubik',sans-serif;">Let's Chat</h1>
                                         <span style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece; 
                                         width:100px;"></span>
                                     </td>
