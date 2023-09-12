@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const dotenv = require("dotenv");
-dotenv.config();
 const nodemailer = require("nodemailer");
 
 const contactEmail = (req, res) => {
