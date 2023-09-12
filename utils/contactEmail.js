@@ -60,10 +60,22 @@ const contactEmail = (req, res) => {
                                         <table cellpadding="0" cellspacing="0"
                                             style="width: 100%; border: 1px solid #ededed">
                                             <tbody>
-                                               <p>Hello! Happy to be connected with you. What project are you wanting to work on? My expertise lies in Website Development, 3D animation, and Virtual Reality. If you are looking to create something entirely new(my favorite), lets get on a call and chat. Contact me at (714) 707-9279 and we can talk more. Cheers!</p>
-                                               <br></br>
-                                               <p>-Vinh Nuwin</p>
+                                               <p>Hello! Happy to be connected with you. What project are you wanting to work on? My expertise lies in Website Development, 3D animation, and Virtual Reality. If you are looking to create something entirely new(my favorite), lets get on a call and chat. Contact me at (714) 707-9279 and we can talk more.</p>
+                               
+                                <br></br>
+                                <p>or</p>
+<h2>
+    Schedule a meeting 
+</h2>
 
+<br/>
+
+<a href="https://calendar.app.google/Zt9HVmDrciVXk4KV6">Here</a>
+
+                <br/>
+                                               <p>Cheers!</p>
+                                               <br/>
+                                               <p>-Vinh Nuwin</p>
 
                                             </tbody>
                                         </table>
@@ -80,7 +92,7 @@ const contactEmail = (req, res) => {
                     </tr>
                     <tr>
                         <td style="text-align:center;">
-                                <p style="font-size:14px; color:#455056bd; line-height:18px; margin:0 0 0;">&copy; <strong>www.documentedvoices.org</strong></p>
+                                <p style="font-size:14px; color:#455056bd; line-height:18px; margin:0 0 0;">&copy; <strong>www.vinhnuwin.netlify.app</strong></p>
                         </td>
                     </tr>
                 </table>
@@ -90,8 +102,6 @@ const contactEmail = (req, res) => {
 </body>
 
 </html>`;
-
-  ("Hello! Happy to be connected with you. What project are you wanting to work on? My expertise lies in Website Development, 3D animation, and Virtual Reality. If you are looking to create something entirely new(my favorite), lets get on a call and chat. Contact me at (714) 707-9279 and we can talk more. Cheers! - Vinh Nuwin");
 
   res.status(200).json();
 
