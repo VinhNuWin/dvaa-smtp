@@ -12,8 +12,8 @@ const contactEmail = (req, res) => {
 
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>Documented Voices Registry</title>
-    <meta name="description" content="Documented Voices Registry Report">
+    <title>Vinh Nuwin Contact</title>
+    <meta name="description" content="Vinh Nuwin">
 </head>
 <style>
     a:hover {text-decoration: underline !important;}
